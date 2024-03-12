@@ -9,12 +9,8 @@ int main ()
     {
         printf("sei maggiorenne\n");
     }
-    else if(a < 18)
-    {
-        printf("sei minorenne\n");
-    }
     else
     {
-        printf("gabriele federico gioia III\n");
+        printf("sei minorenne\n");
     }
 }
