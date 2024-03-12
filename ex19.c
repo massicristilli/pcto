@@ -20,7 +20,7 @@ int main ()
         media = (float)somma / divisori;
         if(numeri >= 0)
         {
-            printf("%f\n", media);
+            printf("media =%f\n", media);
         }
 
     }
