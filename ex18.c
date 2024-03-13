@@ -5,7 +5,7 @@ int main ()
      int b = 100;
      while(b >= 0)
      {
-        printf("%d ", b);
+        printf("%d\n", b);
         b-=2;
      }
 
