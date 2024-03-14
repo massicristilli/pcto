@@ -23,3 +23,28 @@ double sqrt(double x)
     }
     return guess;
 }
+
+
+
+double sqrt(double x)
+{
+    double a = 0.001;
+    if(x <0)
+    {
+        printf("errore\n");
+    }
+    else if(x == 0 || x == 1)
+    {
+        return x;
+    }
+    else if(x > 0)
+    {
+        while(x != a * a)
+        {
+            a+=0.001;
+        }
+        return a;
+    }  
+    
+
+}

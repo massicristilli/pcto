@@ -45,7 +45,8 @@ int main ()
      }
      else if(delta == 0)
      {
-        x1 == x2 == -b / (2 * a);
+        x2 = -b / (2 * a);
+        x1 = x2;
         printf("i risultati dell'equazione coincidono e sono %lf", x1);
      }
      else if(delta < 0)
