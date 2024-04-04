@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void minuscole(char *parola[100])
+void minuscole(char **parola)
 {
     int b = 0;
     while((*parola)[b] != '\0')

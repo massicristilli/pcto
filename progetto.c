@@ -1,6 +1,20 @@
 #include <stdio.h>
 
 
+void minuscole(char *parola[100])
+{
+    int b = 0;
+    while((*parola)[b] != '\0')
+    {
+        if((*parola)[b] >= 65 && (*parola)[b] <= 90)
+        {
+            (*parola)[b] = (*parola)[b] + 32;
+        }
+        b++; 
+    }
+}
+
+
 
 
 
@@ -25,12 +39,11 @@ char sign_in()
 {
     char password[30];
     char nome_signin[30];
-    printf("\nInserisci il nome o email del account e password\n");
     printf("\nInserisci il nome del account o l'email personale: ");
     scanf("%s", nome_signin);
-    printf("\nInserisci il password: ");
+    printf("\nInserisci la password: ");
     scanf("%s", password);
-    printf("\n\n\nInserimento successo...\n");
+    printf("\n\n\nInserimento sul cesso...\n");
 }
 
 char login_stander()
@@ -57,7 +70,7 @@ char login_stander()
     scanf("%s", telefono);
     printf("\nInserisci l'email personale: ");
     scanf("%s", email);
-    printf("\nInserisci il password: ");
+    printf("\nInserisci la password di massimo 30 caratteri: ");
     scanf("%s", password);
 
 }
@@ -100,15 +113,15 @@ int main()
     {
         char scelta_opening[25];
         printf("Vuoi far parte anche tu di Qskip?\n\n");
-        scanf("%s", scelta_opening);
-        if('s' == scelta_opening[0] || 'S' ==scelta_opening[0])
+        scanf("%s", minuscole(&scelta_opening));
+        if(('s' == scelta_opening[0]) && ('i' == scelta_opening[1]))
         {
             q++;
             char equal[4];
             while(q == 1)
             {
                 printf("hai giá un account?\n");
-                scanf("%s", equal);
+                scanf("%s", minuscole(&equal));
                 if((equal[0] == 'n') && (equal[1] == 'o'))
                 {
                     q++;
@@ -120,7 +133,7 @@ int main()
                     while(q == 2)
                     {
                         printf("\nperfetto!, vuoi essere un utente o uno stander?\n");
-                        scanf("%s", risposta);
+                        scanf("%s", minuscole(&risposta));
                         if(risposta[0] == 'u' && risposta[1] == 't' && risposta[2] == 'e' && risposta[3] == 'n' && risposta[4] == 't' && risposta[5] == 'e')
                         {
                             printf("hai scelto di essere un nuovo utente!\n\nadesso puoi fare la fila ovunque dal divano di casa tua!\n\nprima peró devi fare il login!\n\n");
@@ -159,7 +172,7 @@ int main()
             }
             
         }
-        else if('n' == scelta_opening[0] || 'N' == scelta_opening[0])
+        else if('n' == scelta_opening[0] || 'o' == scelta_opening[0])
         {
             printf("Speriamo di rivederti presto\n");
         }
